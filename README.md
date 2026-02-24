@@ -26,7 +26,7 @@ Express.js is a minimal and flexible Node.js web application framework that prov
    ```
 2. **Set the PORT in `.env` (optional):**
    ```env
-   PORT=6000
+   PORT=3000
    ```
 3. **Start the server:**
    ```bash
