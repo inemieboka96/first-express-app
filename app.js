@@ -34,6 +34,12 @@ app.use((req, res, next) => {
   next(); // Move to the next middleware/route
 });
 
+/*
+    SERVING STATIC FILES
+*/
+
+app.use(express.static('public'));
+
 // Starting Server
 app.listen(PORT, () => {
   console.log(`Server is running on Port ${PORT}`);
