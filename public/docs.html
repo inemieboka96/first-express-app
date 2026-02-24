@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | First Express App</title>
+  <title>Docs | First Express App</title>
   <style>
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+      background: linear-gradient(135deg, #e0f7fa 0%, #e0e7ff 100%);
       color: #22223b;
       margin: 0;
       padding: 0;
@@ -47,14 +47,14 @@
     @keyframes bounce {
       to { transform: translateY(-8px); }
     }
-    .home-card {
+    .docs-card {
       background: #fff;
       border-radius: 18px;
       box-shadow: 0 4px 24px rgba(58,134,255,0.08);
       padding: 32px 28px;
-      max-width: 480px;
+      max-width: 600px;
       margin: 0 auto 32px auto;
-      text-align: center;
+      text-align: left;
       animation: fadeIn 1.5s 0.2s backwards;
     }
     .emoji {
@@ -77,6 +77,20 @@
       display: inline-block;
       animation: fadeIn 1.5s 0.5s backwards;
     }
+    ul {
+      margin: 18px 0 0 18px;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+      font-size: 1.08rem;
+    }
+    code {
+      background: #e0e7ff;
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-size: 1em;
+    }
     footer {
       margin-top: auto;
       padding: 18px 0 10px 0;
@@ -87,22 +101,28 @@
   </style>
 </head>
 <body>
-  <h1>Hello World <span class="emoji">🌍</span></h1>
+  <h1>Docs <span class="emoji">📚</span></h1>
   <nav>
     <a href="/index.html">🏠 Home</a> |
     <a href="/about.html">ℹ️ About</a> |
     <a href="/contact.html">📬 Contact</a> |
     <a href="/docs.html">📚 Docs</a>
   </nav>
-  <div class="home-card">
-    <div class="emoji">✨</div>
-    <p>Welcome to your <strong>first Express.js app</strong>!<br>
-    This is the <span style="color:#3a86ff;">home page</span> served by Express.<br><br>
-    <span style="font-size:1.2em;">🚀 Build fast, modern web apps with ease! 🚀</span></p>
-    <div class="tip">💡 <strong>Tip:</strong> Edit <code>index.html</code> and see your changes instantly.<br>Express serves static files from the <code>public</code> folder.</div>
+  <div class="docs-card">
+    <div class="emoji">📝</div>
+    <h2>Project Documentation</h2>
+    <ul>
+      <li><strong>Express.js Setup:</strong> The server is created using <code>express</code> and listens on a configurable port.</li>
+      <li><strong>Static Files:</strong> All files in the <code>public</code> folder are served automatically (HTML, CSS, images, etc.).</li>
+      <li><strong>Routing:</strong> <code>GET</code> routes for <code>/</code>, <code>/about</code>, <code>/contact</code>, and <code>/docs</code> are handled by static files.</li>
+      <li><strong>POST Routes:</strong> <code>/submit</code> and <code>/data</code> accept form and JSON data.</li>
+      <li><strong>Middleware:</strong> Includes a logger and JSON body parser.</li>
+      <li><strong>Error Handling:</strong> Custom 404 page for unknown routes.</li>
+    </ul>
+    <div class="tip">💡 <strong>Tip:</strong> You can add more static files to the <code>public</code> folder and they will be served automatically!</div>
   </div>
   <footer>
-    Made with <span style="color:#ff006e;">❤</span> and <span class="emoji">⚡</span> by Express Tutorial | 2026
+    Made with <span style="color:#ff006e;">❤</span> and <span class="emoji">📚</span> by Express Tutorial | 2026
   </footer>
 </body>
 </html>

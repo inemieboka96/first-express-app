@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | First Express App</title>
+  <title>Contact | First Express App</title>
   <style>
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+      background: linear-gradient(135deg, #fff0f6 0%, #e0e7ff 100%);
       color: #22223b;
       margin: 0;
       padding: 0;
@@ -47,7 +47,7 @@
     @keyframes bounce {
       to { transform: translateY(-8px); }
     }
-    .home-card {
+    .contact-card {
       background: #fff;
       border-radius: 18px;
       box-shadow: 0 4px 24px rgba(58,134,255,0.08);
@@ -84,25 +84,64 @@
       font-size: 0.98rem;
       letter-spacing: 0.5px;
     }
+    form {
+      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+    }
+    input, textarea {
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid #bdbdbd;
+      font-size: 1rem;
+      width: 90%;
+      max-width: 320px;
+      transition: border 0.2s;
+    }
+    input:focus, textarea:focus {
+      border: 1.5px solid #3a86ff;
+      outline: none;
+    }
+    button {
+      background: #3a86ff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #ff006e;
+    }
   </style>
 </head>
 <body>
-  <h1>Hello World <span class="emoji">🌍</span></h1>
+  <h1>Contact <span class="emoji">📬</span></h1>
   <nav>
     <a href="/index.html">🏠 Home</a> |
     <a href="/about.html">ℹ️ About</a> |
     <a href="/contact.html">📬 Contact</a> |
     <a href="/docs.html">📚 Docs</a>
   </nav>
-  <div class="home-card">
-    <div class="emoji">✨</div>
-    <p>Welcome to your <strong>first Express.js app</strong>!<br>
-    This is the <span style="color:#3a86ff;">home page</span> served by Express.<br><br>
-    <span style="font-size:1.2em;">🚀 Build fast, modern web apps with ease! 🚀</span></p>
-    <div class="tip">💡 <strong>Tip:</strong> Edit <code>index.html</code> and see your changes instantly.<br>Express serves static files from the <code>public</code> folder.</div>
+  <div class="contact-card">
+    <div class="emoji">🤝</div>
+    <p>We'd love to hear from you!<br>
+    Fill out the form below and say hello 👋</p>
+    <form action="/submit" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send ✉️</button>
+    </form>
+    <div class="tip">💡 <strong>Tip:</strong> This form submits to the <code>/submit</code> POST route.</div>
   </div>
   <footer>
-    Made with <span style="color:#ff006e;">❤</span> and <span class="emoji">⚡</span> by Express Tutorial | 2026
+    Made with <span style="color:#ff006e;">❤</span> and <span class="emoji">🤖</span> by Express Tutorial | 2026
   </footer>
 </body>
 </html>
