@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | First Express App</title>
+  <title>404 Not Found | First Express App</title>
   <style>
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+      background: linear-gradient(135deg, #ffe0e9 0%, #e0e7ff 100%);
       color: #22223b;
       margin: 0;
       padding: 0;
@@ -42,12 +42,13 @@
       display: flex;
       align-items: center;
       gap: 0.5em;
-      animation: bounce 1.2s infinite alternate;
+      animation: shake 1.2s infinite alternate;
     }
-    @keyframes bounce {
-      to { transform: translateY(-8px); }
+    @keyframes shake {
+      0% { transform: rotate(-2deg); }
+      100% { transform: rotate(2deg); }
     }
-    .home-card {
+    .notfound-card {
       background: #fff;
       border-radius: 18px;
       box-shadow: 0 4px 24px rgba(58,134,255,0.08);
@@ -87,22 +88,22 @@
   </style>
 </head>
 <body>
-  <h1>Hello World <span class="emoji">🌍</span></h1>
+  <h1>404 <span class="emoji">❌</span></h1>
   <nav>
     <a href="/index.html">🏠 Home</a> |
     <a href="/about.html">ℹ️ About</a> |
     <a href="/contact.html">📬 Contact</a> |
     <a href="/docs.html">📚 Docs</a>
   </nav>
-  <div class="home-card">
-    <div class="emoji">✨</div>
-    <p>Welcome to your <strong>first Express.js app</strong>!<br>
-    This is the <span style="color:#3a86ff;">home page</span> served by Express.<br><br>
-    <span style="font-size:1.2em;">🚀 Build fast, modern web apps with ease! 🚀</span></p>
-    <div class="tip">💡 <strong>Tip:</strong> Edit <code>index.html</code> and see your changes instantly.<br>Express serves static files from the <code>public</code> folder.</div>
+  <div class="notfound-card">
+    <div class="emoji">😵‍💫</div>
+    <p>Oops! The page you are looking for does not exist.<br>
+    Maybe you followed a broken link or typed the wrong address.<br><br>
+    <span style="font-size:1.2em;">🚧 But don't worry, you can always go back home! 🚧</span></p>
+    <div class="tip">💡 <strong>Tip:</strong> Check the URL or use the navigation above.</div>
   </div>
   <footer>
-    Made with <span style="color:#ff006e;">❤</span> and <span class="emoji">⚡</span> by Express Tutorial | 2026
+    Made with <span style="color:#ff006e;">❤</span> and <span class="emoji">🦄</span> by Express Tutorial | 2026
   </footer>
 </body>
 </html>
